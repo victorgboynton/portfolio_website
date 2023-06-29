@@ -66,7 +66,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Header />
-      <div className="flex flex-wrap justify-center lg:gap-60 items-center">
+      <div className="flex flex-wrap justify-center lg:gap-36 items-center">
         <Description />
         <SkillsList />
       </div>
@@ -79,9 +79,12 @@ export default function Home() {
 
 function SkillsList() {
   return (
-    <div>
-      <div className="grid grid-cols-3 mx-auto">
-        <ul>
+    <div className="text-center border-4 max-w-md border-cyan-900 rounded bg-gray-800">
+      <p className="border-b-4 font-bold text-slate-50 border-cyan-900 text-2xl bg-cyan-800">
+        My skills:
+      </p>
+      <div className="flex mx-auto">
+        <ul className="flex flex-wrap">
           {skills.map((skill) => (
             <Skill skillObj={skill} key={skill.id} />
           ))}
@@ -93,7 +96,7 @@ function SkillsList() {
 
 function Skill({ skillObj }: { skillObj: any }) {
   return (
-    <span className=" col-span-1 border-2 rounded-2xl px-4 m-1 py-1 bg-fuchsia-600 text-slate-900">
+    <span className="font-bold border-2 rounded-2xl px-4 m-1 py-1 bg-cyan-600 text-slate-900">
       {skillObj.skill}
     </span>
   );
