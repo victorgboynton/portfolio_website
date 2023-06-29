@@ -4,7 +4,10 @@ import pictureOfMe from "./pictureOfMe.jpg";
 
 export function Description() {
   return (
-    <div className="border-2 flex flex-row bg-gray-800 rounded pr-2 max-w-md border-cyan-900 justify-between">
+    <div className="border-4 flex flex-col bg-gray-800 rounded  max-w-md border-cyan-900 justify-between">
+      <p className="text-center font-bold bg-cyan-800 text-slate-50 text-2xl border-b-4 border-cyan-900">
+        A little about me:
+      </p>
       <Image
         src={pictureOfMe}
         alt="picture of me"
