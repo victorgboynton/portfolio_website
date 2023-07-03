@@ -4,15 +4,15 @@ import pictureOfMe from "./pictureOfMe.jpg";
 
 export function Description() {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row border-2 border-purple-700 rounded">
       <Image
         src={pictureOfMe}
         alt="picture of me"
-        className="border-orange-500 border-2 rounded w-60 h-60"
+        className="border-purple-700 border-r-2 w-60 h-60"
       />
-      <div className="border-2 flex backdrop-blur rounded min-h-full max-w-xl border-orange-500 bg-gray-800/50">
+      <div className=" flex backdrop-blur rounded min-h-full max-w-xl bg-gray-800/50">
         <div className="flex flex-col">
-          <p className="text-center font-bold bg-orange-600 text-white text-2xl border-b-2 border-orange-500">
+          <p className="text-center font-bold bg-purple-900 text-white text-2xl border-b-2 border-purple-700">
             A little about me:
           </p>
           <p className="text-xl font-semibold font-sans text-white">

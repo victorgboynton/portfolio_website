@@ -97,8 +97,8 @@ export default function Home() {
 
 function SkillsList() {
   return (
-    <div className="text-center border-2 bg-gray-800/50 max-w-xl border-orange-500 rounded backdrop-blur">
-      <p className="border-b-2 font-bold text-slate-50 border-orange-500 text-2xl bg-orange-600">
+    <div className="text-center border-2 bg-gray-800/50 max-w-xl border-purple-700 rounded backdrop-blur">
+      <p className="border-b-2 font-bold text-slate-50 border-purple-700 text-2xl bg-purple-900">
         My skills:
       </p>
       <div className="flex flex-wrap mx-auto">
@@ -114,7 +114,7 @@ function SkillsList() {
 
 function Skill({ skillObj }: { skillObj: any }) {
   return (
-    <span className="font-bold border-2 rounded-2xl px-4 m-1 py-1 bg-orange-400 text-slate-950">
+    <span className="font-bold border-2 rounded-2xl px-4 m-1 py-1 bg-purple-400 text-slate-950">
       {skillObj.skill}
     </span>
   );
