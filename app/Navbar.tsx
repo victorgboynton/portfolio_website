@@ -4,7 +4,7 @@ export function Navbar() {
   return (
     <nav className="flex items-center justify-between ">
       <div className="left-0">
-        <h1 className="font-semibold px-2 text-xl tracking-wide p-1 text-slate-600 bg-sky-500">
+        <h1 className="font-semibold px-2 text-xl tracking-wide p-1 text-slate-900 bg-orange-600">
           Victor Boynton, AAS
         </h1>
       </div>

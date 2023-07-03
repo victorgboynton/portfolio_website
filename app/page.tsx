@@ -60,12 +60,20 @@ const skills = [
     id: 9,
     skill: "Tailwind CSS",
   },
+  {
+    id: 10,
+    skill: "SQL",
+  },
+  {
+    id: 11,
+    skill: "Javascript",
+  },
 ];
 export default function Home() {
   return (
-    <div className="bg-scroll">
+    <div className="bg-local">
       <div
-        className=" -z-50 sm:bg-image_background h-screen "
+        className=" -z-50 sm:bg-image_background md:h-full"
         style={{
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -74,7 +82,7 @@ export default function Home() {
         <Navbar />
         <Header />
 
-        <div className="flex flex-wrap justify-center lg:gap-48 mt-8 items-center">
+        <div className="flex flex-wrap justify-center  lg:gap-20 mt-8 items-center">
           <Description />
           <SkillsList />
         </div>
@@ -89,12 +97,12 @@ export default function Home() {
 
 function SkillsList() {
   return (
-    <div className="text-center border-4 max-w-xl border-cyan-900 rounded bg-gray-800">
-      <p className="border-b-4 font-bold text-slate-50 border-cyan-900 text-2xl bg-cyan-800">
+    <div className="text-center border-2 bg-gray-800/50 max-w-xl border-orange-500 rounded backdrop-blur">
+      <p className="border-b-2 font-bold text-slate-50 border-orange-500 text-2xl bg-orange-600">
         My skills:
       </p>
-      <div className="flex mx-auto">
-        <ul className="flex flex-wrap">
+      <div className="flex flex-wrap mx-auto">
+        <ul className="flex flex-wrap justify-center">
           {skills.map((skill) => (
             <Skill skillObj={skill} key={skill.id} />
           ))}
@@ -106,12 +114,23 @@ function SkillsList() {
 
 function Skill({ skillObj }: { skillObj: any }) {
   return (
-    <span className="font-bold border-2 rounded-2xl px-4 m-1 py-1 bg-cyan-600 text-slate-900">
+    <span className="font-bold border-2 rounded-2xl px-4 m-1 py-1 bg-orange-400 text-slate-950">
       {skillObj.skill}
     </span>
   );
 }
 
 function Footer() {
-  return <div className="bg:black bottom-0">hello world</div>;
+  return (
+    <div className=" flex justify-between bottom-0 text-white bg-black px-4">
+      <ul className="flex gap-2">
+        <li>Projects</li>
+        <li>Contact</li>
+        <li>About Me</li>
+      </ul>
+      <div>Logo place-holder</div>
+
+      <p>Return to top</p>
+    </div>
+  );
 }
