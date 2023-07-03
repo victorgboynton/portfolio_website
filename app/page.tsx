@@ -63,23 +63,33 @@ const skills = [
 ];
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <Header />
-      <div className="flex flex-wrap justify-center lg:gap-36 items-center">
-        <Description />
-        <SkillsList />
-      </div>
-      <ProjectList />
+    <div className="bg-scroll">
+      <div
+        className=" -z-50 sm:bg-image_background h-screen "
+        style={{
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <Navbar />
+        <Header />
 
-      <Footer />
+        <div className="flex flex-wrap justify-center lg:gap-48 mt-8 items-center">
+          <Description />
+          <SkillsList />
+        </div>
+
+        <ProjectList />
+
+        <Footer />
+      </div>
     </div>
   );
 }
 
 function SkillsList() {
   return (
-    <div className="text-center border-4 max-w-md border-cyan-900 rounded bg-gray-800">
+    <div className="text-center border-4 max-w-xl border-cyan-900 rounded bg-gray-800">
       <p className="border-b-4 font-bold text-slate-50 border-cyan-900 text-2xl bg-cyan-800">
         My skills:
       </p>
@@ -103,13 +113,5 @@ function Skill({ skillObj }: { skillObj: any }) {
 }
 
 function Footer() {
-  return (
-    <div className="mx-auto flex  max-w-md  text-center items-center justify-center">
-      <div className="h-36 w-full rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
-        <div className="flex h-full w-full items-center justify-center bg-gray-800 back">
-          <h1 className="text-2xl font-black text-white">Please hire me</h1>
-        </div>
-      </div>
-    </div>
-  );
+  return <div className="bg:black bottom-0">hello world</div>;
 }

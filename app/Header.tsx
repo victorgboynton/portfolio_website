@@ -2,12 +2,16 @@ import React from "react";
 
 export function Header() {
   return (
-    <div className="m-4 mx-auto justify-center text-center max-w-3xl bg-gray-800 rounded border-sky-800 border-2">
-      <div className="px-4 justify-center">
-        <h1 className=" flex-col text-4xl mb-8 font-extrabold text-slate-100">
-          Lorem ipsum dolor sit amet,
+    <div className=" mx-auto mt-4 justify-center rounded-lg backdrop-blur border-cyan-900 border-2 lg:max-w-7xl">
+      <div className="px-4 pt-4 justify-center">
+        <h1 className=" flex-col lg:text-5xl text-center text-4xl mb-2 font-extrabold text-white">
+          Full-stack web development done right
         </h1>
-        <em className="text-green-500 text-5xl font-bold">lorem ipsum</em>
+        <div className="text-right">
+          <em className="text-green-500  text-5xl font-bold">
+            By Victor Boynton
+          </em>
+        </div>
       </div>
     </div>
   );
