@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Navbar() {
+export default function Navbar() {
   return (
     <nav className="flex items-center justify-between ">
       <div className="left-0">

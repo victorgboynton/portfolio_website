@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import { Description } from "./Description";
-import { Navbar } from "./Navbar";
+import Navbar from "./Navbar";
 import { Header } from "./Header";
 import { ProjectList } from "./ProjectList";
 
@@ -81,13 +81,11 @@ export default function Home() {
       >
         <Navbar />
         <Header />
-
-        <div className="flex flex-wrap justify-center  lg:gap-20 mt-8 items-center">
+        <ProjectList />
+        <div className="flex flex-wrap justify-center  lg:gap-20 mt-8 mb-20 items-center">
           <Description />
           <SkillsList />
         </div>
-
-        <ProjectList />
 
         <Footer />
       </div>
@@ -130,7 +128,7 @@ function Footer() {
       </ul>
       <div>Logo place-holder</div>
 
-      <p>Return to top</p>
+      <p>Return to home</p>
     </div>
   );
 }
