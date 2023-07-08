@@ -72,7 +72,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="bg-zinc-950 border-t-4 border-slate-900">
+      <div className="bg-zinc-300 border-t-4 border-slate-900">
         <ProjectList />
         <div className="flex flex-wrap justify-center lg:gap-20 mt-8 pb-10 items-center">
           <Description />

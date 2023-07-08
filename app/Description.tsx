@@ -10,7 +10,7 @@ export function Description() {
         alt="picture of me"
         className="border-purple-700 border-r-2 w-60 h-60"
       />
-      <div className=" flex backdrop-blur rounded min-h-full max-w-xl bg-gray-800/50">
+      <div className=" flex backdrop-blur rounded min-h-full max-w-xl ">
         <div className="flex flex-col bg-purple-800/25">
           <p className="text-center font-bold bg-purple-900 text-white text-2xl border-b-2 border-purple-700">
             A little about me:

@@ -12,9 +12,7 @@ export function Project({ projectObj }: { projectObj: any }) {
           className="border-b-2 border-purple-700"
         />
       </div>
-      <p className="text-slate-50 text-center backdrop-blur ">
-        {projectObj.name}
-      </p>
+      <p className="text-slate-50 text-center ">{projectObj.name}</p>
     </div>
   );
 }
