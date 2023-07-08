@@ -5,7 +5,7 @@ import { Project } from "./Project";
 export function ProjectList() {
   return (
     <div>
-      <ul className="flex flex-wrap justify-between lg:mx-40 my-20">
+      <ul className="flex flex-wrap justify-between lg:mx-40 mt-8 mb-20">
         {projects.map((project) => (
           <Project projectObj={project} key={project.id} />
         ))}

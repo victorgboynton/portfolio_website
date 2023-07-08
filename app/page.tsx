@@ -1,7 +1,6 @@
 import { useState } from "react";
 import React from "react";
 import { Description } from "./Description";
-import Navbar from "./Navbar";
 import { Header } from "./Header";
 import { ProjectList } from "./ProjectList";
 
@@ -71,23 +70,14 @@ const skills = [
 ];
 export default function Home() {
   return (
-    <div className="bg-local">
-      <div
-        className=" -z-50 sm:bg-image_background md:h-full"
-        style={{
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <Navbar />
-        <Header />
+    <div>
+      <Header />
+      <div className="bg-zinc-950 border-t-4 border-slate-900">
         <ProjectList />
-        <div className="flex flex-wrap justify-center  lg:gap-20 mt-8 mb-20 items-center">
+        <div className="flex flex-wrap justify-center lg:gap-20 mt-8 pb-10 items-center">
           <Description />
           <SkillsList />
         </div>
-
-        <Footer />
       </div>
     </div>
   );
@@ -95,7 +85,7 @@ export default function Home() {
 
 function SkillsList() {
   return (
-    <div className="text-center border-2 bg-gray-800/50 max-w-xl border-purple-700 rounded backdrop-blur">
+    <div className="text-center border-2 bg-purple-800/25 max-w-xl border-purple-700 rounded backdrop-blur">
       <p className="border-b-2 font-bold text-slate-50 border-purple-700 text-2xl bg-purple-900">
         My skills:
       </p>
@@ -115,20 +105,5 @@ function Skill({ skillObj }: { skillObj: any }) {
     <span className="font-bold border-2 rounded-2xl px-4 m-1 py-1 bg-purple-400 text-slate-950">
       {skillObj.skill}
     </span>
-  );
-}
-
-function Footer() {
-  return (
-    <div className=" flex justify-between bottom-0 text-white bg-black px-4">
-      <ul className="flex gap-2">
-        <li>Projects</li>
-        <li>Contact</li>
-        <li>About Me</li>
-      </ul>
-      <div>Logo place-holder</div>
-
-      <p>Return to home</p>
-    </div>
   );
 }
