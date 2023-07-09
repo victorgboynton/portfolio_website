@@ -1,9 +1,10 @@
 import { useState } from "react";
 import React from "react";
 import { Description } from "./Description";
-import Navbar from "./Navbar";
 import { Header } from "./Header";
 import { ProjectList } from "./ProjectList";
+import Image from "next/image";
+import pictureOfMe from "./pictureOfMe.jpg";
 
 export const projects = [
   {
@@ -71,33 +72,37 @@ const skills = [
 ];
 export default function Home() {
   return (
-    <div className="bg-local">
-      <div
-        className=" -z-50 md:h-full"
-        style={{
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <Navbar />
-        <Header />
+    <div>
+      <Header />
+      <div className="bg-gradient-to-b from-gray-900 to-gray-500 border-t-4 border-slate-950">
         <ProjectList />
-        <div className="flex flex-wrap justify-center  lg:gap-20 mt-8 mb-20 items-center">
-          <Description />
-          <SkillsList />
+        <div className=" md:grid grid-col-3 place-items-center justify-center  mt-8 pb-10 items-center">
+          <div className="col-span-2 flex flex-col mx-4">
+            <Description2 />
+            <div className="mx-auto">
+              <SkillsList>My Skills:</SkillsList>
+            </div>
+          </div>
+          <div className="flex justify-center md:col-start-3">
+            <Image
+              src="/me.JPG"
+              alt="picture of me"
+              className="border-purple-700 "
+              width={500}
+              height={616}
+            />
+          </div>
         </div>
-
-        <Footer />
       </div>
     </div>
   );
 }
 
-function SkillsList() {
+function SkillsList({ children }: { children: any }) {
   return (
-    <div className="text-center border-2 bg-gray-800/50 max-w-xl border-purple-700 rounded backdrop-blur">
+    <div className="text-center border-2 bg-purple-800/25 max-w-xl border-purple-700 rounded backdrop-blur">
       <p className="border-b-2 font-bold text-slate-50 border-purple-700 text-2xl bg-purple-900">
-        My skills:
+        {children}
       </p>
       <div className="flex flex-wrap mx-auto">
         <ul className="flex flex-wrap justify-center">
@@ -118,17 +123,17 @@ function Skill({ skillObj }: { skillObj: any }) {
   );
 }
 
-function Footer() {
+function Description2() {
   return (
-    <div className=" flex justify-between bottom-0 text-white bg-black px-4">
-      <ul className="flex gap-2">
-        <li>Projects</li>
-        <li>Contact</li>
-        <li>About Me</li>
-      </ul>
-      <div>Logo place-holder</div>
-
-      <p>Return to home</p>
+    <div className="grid text-center">
+      <h1 className="text-4xl font-extrabold border-b-4 border-purple-700 mb-6 text-black">
+        A LITTLE ABOUT ME
+      </h1>
+      <p className="text-left text-xl">
+        My name is Victor Boynton, and I am an aspiring web developer. I may not
+        hae much experience, but what I lack in formal training, I make up for
+        in gusto and desire to learn. yada yada yada yada yada yada
+      </p>
     </div>
   );
 }
