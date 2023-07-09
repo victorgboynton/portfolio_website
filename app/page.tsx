@@ -76,10 +76,10 @@ export default function Home() {
       <Header />
       <div className="bg-gradient-to-b from-gray-900 to-gray-500 border-t-4 border-slate-950">
         <ProjectList />
-        <div className=" md:grid grid-col-3 place-items-center justify-center  mt-8 pb-10 items-center">
-          <div className="col-span-2 flex flex-col mx-4">
+        <div className=" md:grid grid-col-3 place-items-center justify-center mx-8 mt-8 pb-10 items-center">
+          <div className="col-span-2 flex flex-col gap-10 mx-4">
             <Description2 />
-            <div className="mx-auto">
+            <div className="mx-auto mb-10">
               <SkillsList>My Skills:</SkillsList>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Home() {
             <Image
               src="/me.JPG"
               alt="picture of me"
-              className="border-purple-700 "
+              className="border-purple-700 border rounded "
               width={500}
               height={616}
             />
