@@ -73,7 +73,7 @@ export default function Home() {
   return (
     <div className="bg-local">
       <div
-        className=" -z-50 sm:bg-image_background md:h-full"
+        className=" -z-50 md:h-full"
         style={{
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
