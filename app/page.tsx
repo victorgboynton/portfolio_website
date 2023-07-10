@@ -74,16 +74,18 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="bg-gradient-to-b from-gray-900 to-gray-500 border-t-4 border-slate-950">
+      <div className="bg-gradient-to-b from-gray-900 to-gray-700 border-t-4 border-slate-950">
         <ProjectList />
         <div className=" md:grid grid-col-3 place-items-center justify-center mx-8 mt-8 pb-10 items-center">
-          <div className="col-span-2 flex flex-col gap-10 mx-4">
-            <Description2 />
+          <div className="col-span-2 flex flex-col mx-4">
+            <div className="">
+              <Description2 />
+            </div>
             <div className="mx-auto mb-10">
               <SkillsList>My Skills:</SkillsList>
             </div>
           </div>
-          <div className="flex justify-center md:col-start-3">
+          <div className="flex justify-center relative md:col-start-3">
             <Image
               src="/me.JPG"
               alt="picture of me"
@@ -100,7 +102,7 @@ export default function Home() {
 
 function SkillsList({ children }: { children: any }) {
   return (
-    <div className="text-center border-2 bg-purple-800/25 max-w-xl border-purple-700 rounded backdrop-blur">
+    <div className="my-auto text-center border-2 bg-purple-800/25 max-w-xl border-purple-700 rounded backdrop-blur">
       <p className="border-b-2 font-bold text-slate-50 border-purple-700 text-2xl bg-purple-900">
         {children}
       </p>
@@ -125,11 +127,11 @@ function Skill({ skillObj }: { skillObj: any }) {
 
 function Description2() {
   return (
-    <div className="grid text-center">
-      <h1 className="text-4xl font-extrabold border-b-4 border-purple-700 mb-6 text-black">
+    <div className="grid text-center my-auto">
+      <h1 className="text-4xl font-extrabold border-b-4 border-purple-700 mb-4 text-black">
         A LITTLE ABOUT ME
       </h1>
-      <p className="text-left text-xl">
+      <p className="text-left text-xl font-semibold">
         My name is Victor Boynton, and I am an aspiring web developer. I may not
         hae much experience, but what I lack in formal training, I make up for
         in gusto and desire to learn. yada yada yada yada yada yada
