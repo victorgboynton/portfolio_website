@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Navbar() {
@@ -8,7 +9,7 @@ export default function Navbar() {
           Victor Boynton, AAS
         </h1>
       </div>
-      <div className="text-white font-bold pr-1 py space-x-2">
+      <div className="text-white font-bold pr-1 space-x-2">
         <button className="hover:bg-purple-900/25 rounded p-1.5">
           Projects
         </button>
@@ -18,6 +19,16 @@ export default function Navbar() {
         <button className="hover:bg-purple-900/50 rounded p-1.5">
           About Me
         </button>
+        <div>
+          <button>
+            <Image
+              src="/hamburger.svg"
+              alt="Menu hamburger"
+              width={30}
+              height={30}
+            />
+          </button>
+        </div>
       </div>
     </nav>
   );

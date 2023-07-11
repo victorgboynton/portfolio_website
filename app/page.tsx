@@ -121,7 +121,7 @@ export default function Home() {
               <SkillsList listItem={softSkills}>My Soft Skills:</SkillsList>
             </div>
           </div>
-          <div className="flex justify-center md:col-start-3">
+          <div className="flex justify-center relative md:col-start-3">
             <Image
               src="/me.JPG"
               alt="picture of me"
