@@ -1,4 +1,3 @@
-import { useState } from "react";
 import React from "react";
 import { Description } from "./Description";
 import { Header } from "./Header";
@@ -107,10 +106,6 @@ const softSkills = [
     id: 9,
     skill: "Critical Thinking",
   },
-  {
-    id: 10,
-    skill: "Autism",
-  },
 ];
 export default function Home() {
   return (
@@ -141,15 +136,15 @@ export default function Home() {
   );
 }
 
-function SkillsList({ children, listItem }: { children: any }) {
+function SkillsList({ children, listItem }: any) {
   return (
     <div className="text-center border-2 bg-purple-800/25 max-w-xl border-purple-700 rounded backdrop-blur mx-2">
-      <p className="border-b-2 font-bold text-slate-50 border-purple-700 text-2xl bg-purple-900">
+      <p className="border-b-2 font-bold text-slate-50 border-purple-700 text-2xl font-monoRoboto bg-purple-900">
         {children}
       </p>
       <div className="flex flex-wrap mx-auto">
         <ul className="flex flex-wrap justify-center">
-          {listItem.map((skill) => (
+          {listItem.map((skill: any) => (
             <Skill skillObj={skill} key={skill.id} />
           ))}
         </ul>
@@ -158,7 +153,7 @@ function SkillsList({ children, listItem }: { children: any }) {
   );
 }
 
-function Skill({ skillObj }: { skillObj: any }) {
+function Skill({ skillObj }: any) {
   return (
     <span className="font-bold border-2 rounded-2xl px-4 m-1 py-1 bg-purple-400 text-slate-950">
       {skillObj.skill}
@@ -169,10 +164,10 @@ function Skill({ skillObj }: { skillObj: any }) {
 function Description2() {
   return (
     <div className="grid text-center">
-      <h1 className="text-4xl font-extrabold border-b-4 border-purple-700 mb-6 text-white">
+      <h1 className="text-4xl font-extrabold border-b-4 border-purple-700 mb-6 font-monoRoboto text-white">
         A LITTLE ABOUT ME
       </h1>
-      <p className="text-left text-xl text-white">
+      <p className="text-left text-xl text-white font-monoRoboto">
         My name is Victor Boynton, and I am an aspiring web developer. I may not
         have much experience, but what I lack in formal training, I make up for
         in gusto and desire to learn. yada yada yada yada yada yada Lorem ipsum

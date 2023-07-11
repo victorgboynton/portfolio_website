@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,8 +15,8 @@ module.exports = {
         image_background: "url('./background2.jpg')",
       },
       fontFamily: {
-        'monoRoboto': ["'Roboto Mono'", "sans-serif"],
-        'caprasimo': ['Caprasimo'],
+        'monoRoboto': ["'Roboto Mono'"],
+        'caprasimo': ['caprasimo','sans-serif'],
       },
     },
   },
