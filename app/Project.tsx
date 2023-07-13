@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Project({ projectObj }: { projectObj: any }) {
   return (
-    <div className="flex-col items-center text-center mt-6 mx-6 border-2 justify-between border-purple-700 flex backdrop-blur bg-purple-800/25 rounded">
+    <div className="flex-col items-center text-center mt-6 mx-6 border-2 justify-between shadow-md shadow-emerald-600 border-purple-700 flex backdrop-blur bg-purple-800/25 rounded">
       <div className=" relative w-60 h-60">
         <Image
           src={projectObj.image}

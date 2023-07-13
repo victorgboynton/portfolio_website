@@ -125,7 +125,7 @@ export default function Home() {
             <Image
               src="/me.JPG"
               alt="picture of me"
-              className="border-purple-700 border rounded "
+              className="border-purple-900 border-4 rounded-xl "
               width={500}
               height={616}
             />
@@ -164,10 +164,10 @@ function Skill({ skillObj }: any) {
 function Description2() {
   return (
     <div className="grid text-center">
-      <h1 className="text-4xl font-extrabold border-b-4 border-purple-700 mb-6 font-monoRoboto text-white">
+      <h1 className="text-4xl font-extrabold border-b-4 border-purple-700 mb-6 font-monoRoboto text-gray-200">
         A LITTLE ABOUT ME
       </h1>
-      <p className="text-left text-xl text-white font-monoRoboto">
+      <p className="text-left text-xl text-gray-100 font-monoRoboto">
         My name is Victor Boynton, and I am an aspiring web developer. I may not
         have much experience, but what I lack in formal training, I make up for
         in gusto and desire to learn. yada yada yada yada yada yada Lorem ipsum

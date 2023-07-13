@@ -3,14 +3,14 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between ">
+    <nav className="flex items-center justify-between bg-emerald-700/50">
       <div className="left-0">
-        <h1 className="font-semibold px-2 text-xl tracking-wide p-1 text-white rounded bg-purple-950">
+        <h1 className="font-semibold px-2 text-xl tracking-wide p-1 text-white rounded bg-emerald-700">
           Victor Boynton, AAS
         </h1>
       </div>
       <div className="text-white font-bold pr-1 space-x-2">
-        <button className="hover:bg-purple-900/25 rounded p-1.5">
+        <button className="hover:bg-purple-900/50 rounded p-1.5">
           Projects
         </button>
         <button className="hover:bg-purple-900/50 rounded p-1.5">
@@ -20,14 +20,14 @@ export default function Navbar() {
           About Me
         </button>
         <div>
-          <button>
+          {/* <button>
             <Image
               src="/hamburger.svg"
               alt="Menu hamburger"
               width={30}
               height={30}
             />
-          </button>
+          </button> */}
         </div>
       </div>
     </nav>
