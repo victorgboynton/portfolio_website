@@ -113,22 +113,23 @@ export default function Home() {
       <Header />
       <div className="bg-gradient-to-b from-gray-900 to-gray-500">
         <ProjectList />
-        <div className=" md:grid grid-col-3 place-items-center justify-center mx-8 mt-8 pb-10 items-center">
-          <div className="col-span-2 flex flex-col gap-10 mx-4">
+
+        <div className=" flex flex-col md:grid grid-cols-3 place-items-center mx-8 mt-8 pb-10">
+          <div className="col-span-3 flex gap-10 mx-4">
             <Description2 />
-            <div className="mx-auto mb-10 flex justify-between">
-              <SkillsList listItem={skills}>My Hard Skills:</SkillsList>
-              <SkillsList listItem={softSkills}>My Soft Skills:</SkillsList>
-            </div>
           </div>
-          <div className="flex justify-center relative md:col-start-3">
-            <Image
-              src="/me.JPG"
-              alt="picture of me"
-              className="border-purple-900 border-4 rounded-xl "
-              width={500}
-              height={616}
-            />
+          <div className=" mb-10 flex flex-col xl:flex-row col-span-3 justify-center">
+            <SkillsList listItem={skills}>My Hard Skills:</SkillsList>
+            <div className="relative mx-auto item-center">
+              <Image
+                src="/me2.JPG"
+                alt="picture of me"
+                className="border-purple-900 border-x-4 border-y-2 rounded-xl aspect-square "
+                width={300}
+                height={300}
+              />
+            </div>
+            <SkillsList listItem={softSkills}>My Soft Skills:</SkillsList>
           </div>
         </div>
       </div>
@@ -138,7 +139,7 @@ export default function Home() {
 
 function SkillsList({ children, listItem }: any) {
   return (
-    <div className="text-center border-2 bg-purple-800/25 max-w-xl border-purple-700 rounded backdrop-blur mx-2">
+    <div className="text-center border-2 bg-purple-800/25 max-w-lg border-purple-700 rounded backdrop-blur mx-2">
       <p className="border-b-2 font-bold text-slate-50 border-purple-700 text-2xl font-monoRoboto bg-purple-900">
         {children}
       </p>
